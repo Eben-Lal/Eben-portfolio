@@ -1,0 +1,60 @@
+/* Theme: Midnight & cobalt (original). To use it, import this file in src/index.css. */
+:root {
+  color-scheme: light;
+  --bg: #f5f6f8;          /* porcelain */
+  --surface: #ffffff;
+  --surface-2: #eceef3;
+  --ink: #161a2e;         /* midnight ink */
+  --ink-soft: #3a4058;
+  --muted: #5b6274;       /* slate */
+  --line: #dde0e7;
+  --accent: #3346e0;      /* cobalt */
+  --accent-ink: #ffffff;
+  --accent-soft: #e6e9fd;
+  --signal: #f2b544;      /* amber, used sparingly */
+  --band: #161a2e;        /* inverted band */
+  --band-ink: #eef0f7;
+  --band-muted: #a9aec4;
+  --band-line: #2c3150;
+  --band-accent: #f2b544;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --bg: #0f1222;
+    --surface: #161a2e;
+    --surface-2: #1c2138;
+    --ink: #eef0f7;
+    --ink-soft: #c9cde0;
+    --muted: #9aa0b8;
+    --line: #2a2f4a;
+    --accent: #7c8bff;
+    --accent-ink: #0f1222;
+    --accent-soft: #232a55;
+    --band: #1a1f38;
+    --band-ink: #eef0f7;
+    --band-muted: #a9aec4;
+    --band-line: #313759;
+  --band-accent: #f2b544;
+  }
+}
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --bg: #0f1222;
+  --surface: #161a2e;
+  --surface-2: #1c2138;
+  --ink: #eef0f7;
+  --ink-soft: #c9cde0;
+  --muted: #9aa0b8;
+  --line: #2a2f4a;
+  --accent: #7c8bff;
+  --accent-ink: #0f1222;
+  --accent-soft: #232a55;
+  --band: #1a1f38;
+  --band-ink: #eef0f7;
+  --band-muted: #a9aec4;
+  --band-line: #313759;
+  --band-accent: #f2b544;
+}
+

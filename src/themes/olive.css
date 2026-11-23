@@ -1,0 +1,59 @@
+/* Theme: White & olive green. */
+:root {
+  color-scheme: light;
+  --bg: #ffffff;          /* white */
+  --surface: #ffffff;
+  --surface-2: #f3f5ec;   /* light olive wash for alternate sections */
+  --ink: #263018;         /* deep olive, used for headings and dark buttons */
+  --ink-soft: #3f4a2e;
+  --muted: #5e6650;
+  --line: #e1e5d5;
+  --accent: #556b2f;      /* olive green */
+  --accent-ink: #ffffff;
+  --accent-soft: #edf1e1;
+  --signal: #d4c26a;      /* olive gold, used sparingly */
+  --band: #2c381c;        /* deep olive band (contact section) */
+  --band-ink: #f4f6ec;
+  --band-muted: #b9c1a4;
+  --band-line: #46542f;
+  --band-accent: #d4c26a;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --bg: #12160d;
+    --surface: #1a2013;
+    --surface-2: #1f2618;
+    --ink: #eef1e6;
+    --ink-soft: #cdd3bf;
+    --muted: #9ea78e;
+    --line: #2f3825;
+    --accent: #a6bb6d;
+    --accent-ink: #12160d;
+    --accent-soft: #2a3320;
+    --band: #1d2514;
+    --band-ink: #eef1e6;
+    --band-muted: #b2ba9d;
+    --band-line: #3b4629;
+  --band-accent: #d4c26a;
+  }
+}
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --bg: #12160d;
+  --surface: #1a2013;
+  --surface-2: #1f2618;
+  --ink: #eef1e6;
+  --ink-soft: #cdd3bf;
+  --muted: #9ea78e;
+  --line: #2f3825;
+  --accent: #a6bb6d;
+  --accent-ink: #12160d;
+  --accent-soft: #2a3320;
+  --band: #1d2514;
+  --band-ink: #eef1e6;
+  --band-muted: #b2ba9d;
+  --band-line: #3b4629;
+  --band-accent: #d4c26a;
+}

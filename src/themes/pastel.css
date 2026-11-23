@@ -1,0 +1,62 @@
+/* Theme: White & pastel green. Pastels are used for surfaces and highlights;
+   text and buttons use deep greens so everything stays readable. */
+:root {
+  color-scheme: light;
+  --bg: #ffffff;
+  --surface: #ffffff;
+  --surface-2: #eaf6ee;    /* pastel mint wash for alternate sections */
+  --ink: #1d3a2e;          /* deep green for headings and dark buttons */
+  --ink-soft: #33524a;
+  --muted: #4f6b5e;
+  --line: #d6e9dd;
+  --accent: #2f7656;       /* readable green for links, numbers, badges */
+  --accent-ink: #ffffff;
+  --accent-soft: #d9f2e2;  /* pastel green badge background */
+  --signal: #8ed9ae;       /* pastel green highlight (decorative) */
+  --band: #cfeedb;         /* pastel green contact band */
+  --band-ink: #1d3a2e;
+  --band-muted: #3d5c4e;
+  --band-line: #a6d8ba;
+  --band-accent: #1f6b47;  /* hover colour on the band */
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --bg: #0f1a15;
+    --surface: #15231c;
+    --surface-2: #192a22;
+    --ink: #e9f5ee;
+    --ink-soft: #c7dccf;
+    --muted: #9cb8a9;
+    --line: #26392f;
+    --accent: #a3dcb9;
+    --accent-ink: #0f1a15;
+    --accent-soft: #213a2d;
+    --signal: #8ed9ae;
+    --band: #18271f;
+    --band-ink: #e9f5ee;
+    --band-muted: #a9c4b5;
+    --band-line: #2f4a3c;
+    --band-accent: #a3dcb9;
+  }
+}
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --bg: #0f1a15;
+  --surface: #15231c;
+  --surface-2: #192a22;
+  --ink: #e9f5ee;
+  --ink-soft: #c7dccf;
+  --muted: #9cb8a9;
+  --line: #26392f;
+  --accent: #a3dcb9;
+  --accent-ink: #0f1a15;
+  --accent-soft: #213a2d;
+  --signal: #8ed9ae;
+  --band: #18271f;
+  --band-ink: #e9f5ee;
+  --band-muted: #a9c4b5;
+  --band-line: #2f4a3c;
+  --band-accent: #a3dcb9;
+}

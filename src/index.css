@@ -1,0 +1,86 @@
+@import "tailwindcss";
+
+/* Active colour theme: midnight.css (current, original), olive.css or pastel.css. */
+@import "./themes/midnight.css";
+
+@theme {
+  --font-sans: "Schibsted Grotesk Variable", "Schibsted Grotesk", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-ink: var(--ink);
+  --color-ink-soft: var(--ink-soft);
+  --color-muted: var(--muted);
+  --color-line: var(--line);
+  --color-accent: var(--accent);
+  --color-accent-ink: var(--accent-ink);
+  --color-accent-soft: var(--accent-soft);
+  --color-signal: var(--signal);
+  --color-band: var(--band);
+  --color-band-ink: var(--band-ink);
+  --color-band-muted: var(--band-muted);
+  --color-band-line: var(--band-line);
+  --color-band-accent: var(--band-accent);
+}
+
+/* ---------- Base ---------- */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: calc(5rem + env(safe-area-inset-top, 0px));
+  -webkit-text-size-adjust: 100%;
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-sans);
+  font-size: 1.0625rem;
+  line-height: 1.6;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+
+::selection { background: var(--accent); color: var(--accent-ink); }
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 6px;
+}
+
+img, svg { max-width: 100%; }
+
+.skip-link {
+  position: absolute;
+  left: 1rem;
+  top: -4rem;
+  z-index: 100;
+  padding: 0.75rem 1rem;
+  border-radius: 0.75rem;
+  background: var(--ink);
+  color: var(--bg);
+  font-weight: 600;
+  transition: top 0.15s ease;
+}
+.skip-link:focus { top: calc(1rem + env(safe-area-inset-top, 0px)); }
+
+/* ---------- Hero tool orbit ---------- */
+@keyframes orbit-spin {
+  to { transform: rotate(360deg); }
+}
+.orbit-ring {
+  animation: orbit-spin var(--orbit-duration, 60s) linear infinite;
+  animation-direction: var(--orbit-direction, normal);
+  will-change: transform;
+}
+.tool-orbit:hover .orbit-ring { animation-play-state: paused; }
+@media (prefers-reduced-motion: reduce) {
+  .orbit-ring { animation: none; }
+}
